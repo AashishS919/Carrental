@@ -127,7 +127,7 @@ footer {
 }
 
 .lt img {
-    height: 40px;
+    height: 37px;
 }
 
 .rt {
@@ -137,7 +137,7 @@ footer {
 }
 
 .rt img {
-    height: 40px;
+    height: 37px;
 }
 
 .company {
@@ -148,5 +148,61 @@ footer {
 }
 
 .company img {
-    height: 50px;
+    height: 58px;
+}
+
+/* for best car rental deals part  */
+
+.carDeals {
+    height: 600px;
+}
+
+.carDeals {
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.carDeals h2 {
+    margin: 38px;
+}
+
+.carDeals .filter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filter input {
+    box-sizing: border-box;
+    padding: 7px;
+    width: 280px;
+    border-radius: 7px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.filter input:focus {
+    outline: none;
+}
+
+.carDeals .filter button {
+    background-color: transparent;
+    /* border: none; */
+    color: black;
+    padding: 7px;
+    border-radius: 9px;
+    width: 100px;
+    height: 33px;
+    cursor: pointer;
+}
+
+
+.carDeals button p {
+    font-weight: 500;
+}
+
+.carDeals button:hover {
+    background-color: orangered;
+    border: none;
+    color: white;
 }
