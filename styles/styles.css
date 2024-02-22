@@ -154,7 +154,8 @@ footer {
 /* for best car rental deals part  */
 
 .carDeals {
-    height: 600px;
+    /* min-height: 900px; */
+    height: auto;
 }
 
 .carDeals {
@@ -205,4 +206,358 @@ footer {
     background-color: orangered;
     border: none;
     color: white;
+}
+
+/* for cards  */
+.cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    margin: 30px;
+    height: 372px;
+    width: 350px;
+    border-radius: 13px;
+    box-shadow: 5px 9px 12px gray;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.card h3 {
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.features img {
+    height: 23px;
+    width: 22px;
+}
+
+.fl {
+    display: flex;
+}
+
+.tt {
+    display: flex;
+}
+
+.sc {
+    display: flex;
+}
+
+
+.details {
+    margin-top: 17px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.rate p:first-child {
+    font-weight: bolder;
+}
+
+.rb button {
+    background-color: orangered;
+    border: none;
+    color: white;
+    padding: 7px;
+    border-radius: 9px;
+    width: 100px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.viewMore .vm {
+    background-color: transparent;
+    border: 1px solid orangered;
+    color: orangered;
+    padding: 7px;
+    border-radius: 9px;
+    width: 200px;
+    height: 33px;
+    cursor: pointer;
+}
+
+/* for popup form  */
+.popup1 {
+    text-align: start;
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+}
+
+.popup1.active {
+    z-index: 1;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+
+}
+
+.popup1 .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    background: #ed5506;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup1 h2 {
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup1 h2 span {
+    color: #ed5506;
+}
+
+.popup1 form label {
+    font-size: 14px;
+    color: #222;
+
+
+}
+
+.popup1 form input[type="email"],
+.popup1 form input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border: 1px solid#222;
+    border-radius: 5px;
+}
+
+.popup1 form button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background: #ed5506;
+    color: white;
+    cursor: pointer;
+}
+
+.popup1 form a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*ends*/
+/*popup for sign up*/
+.popup2 {
+    position: absolute;
+    text-align: start;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    padding: 20px 30px;
+    background: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+}
+
+.popup2.active {
+    z-index: 1;
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+
+}
+
+.popup2 .close-btn2 {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    background: #ed5506;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup2 h2 {
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.popup2 h2 span {
+    color: #ed5506;
+}
+
+.popup2 form input[type="text"],
+.popup2 form input[type="email"],
+.popup2 form input[type="tel"],
+.popup2 form input[type="password"],
+.popup2 form input[type="license"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border: 1px solid#222;
+    border-radius: 5px;
+}
+
+.popup2 form button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background: #ed5506;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* for car rental  */
+
+.rental {
+    position: absolute;
+    right: 15px;
+    top: 500px;
+
+
+}
+
+.rental button {
+    padding: 5px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.rental #rentnow {
+    background: #ed5506;
+    color: white;
+}
+
+.carform {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    padding: 20px 30px;
+    background: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+}
+
+.carform.active {
+    top: 200%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: top 0ms ease-in-out 200ms,
+        opacity 200ms ease-in-out 0ms,
+        transform 20ms ease-in-out 0ms;
+
+}
+
+.carform .regcls-btn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    background: #ed5506;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.carform form input[type="text"],
+.carform form input[type="tel"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    outline: none;
+    border: 1px solid#222;
+    border-radius: 5px;
+}
+
+.carform form input[type="date"] {
+    margin-top: 5px;
+    display: block;
+    width: 50%;
+    padding: 7px;
+    outline: none;
+    border: 1px solid#222;
+    border-radius: 5px;
+}
+
+.carform form button {
+
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    background: #ed5506;
+    color: white;
+
+    cursor: pointer;
+}
+
+.carform h2 {
+    text-align: center;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+}
+
+.carform h2 span {
+    color: #ed5506;
 }

@@ -45,8 +45,360 @@ include "./header.php"
         </button>
 
     </div>
-    <div class="card">
+    <div class="cards">
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
 
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <section class="carform">
+        <div class="regcls-btn">&times;</div>
+        <form action="" method="post">
+          <h2><span>RENTNOW</span><br />CARRENTAL</h2>
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter Your Full Name"
+            required
+          /><br />
+
+          <label for="contact">Contact Detail</label>
+          <input
+            type="tel"
+            id="contact"
+            name="contact"
+            placeholder="Enter Your Phone Number"
+            required
+          /><br />
+
+          <label for="pickup">Pickup Location</label>
+          <input
+            type="text"
+            id="pickup"
+            name="pickup"
+            placeholder="Enter Location to Pick up"
+            required
+          /><br />
+
+          <label for="return">Return Location</label>
+          <input
+            type="text"
+            id="return"
+            name="return"
+            placeholder="Enter Location to return"
+            required
+          /><br />
+
+          <label for="date1">Pickup Date</label>
+          <input
+            type="date"
+            id="date1"
+            name="date1"
+            placeholder="Date Here"
+            required
+          />
+
+          <label for="date2">Return Date</label>
+          <input
+            type="date"
+            id="date2"
+            name="date2"
+            placeholder="Date Here"
+            required
+          /><br />
+
+          <button>Rent Now</button>
+        </form>
+      </section>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <h3>Mahindra Scorpio</h3>
+            <img src="../icons/cars/scorpio.png" alt="">
+            <div class="features">
+                <!-- Fuel litre  -->
+                <div class="fl">
+                    <img src="../icons/Features/GasPump.png" alt="">
+                    <p>90L</p>
+                </div>
+                <!-- transmission type  -->
+                <div class="tt">
+                    <img src="../icons/Features/SteeringWheel.png" alt="">
+                    <p>Manual</p>
+                </div>
+                <!-- seat capacity  -->
+                <div class="sc">
+                    <img src="../icons/Features/UsersThree.png" alt="">
+                    <p>8 People</p>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="rate">
+                    <p>Rs 8000</p>
+                    <p>Rate per day</p>
+                </div>
+                <!-- rent button  -->
+                <div class="rb">
+                    <button class="rent">RentNow</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="viewMore">
+        <button class="vm">View More Car</button>
     </div>
 </div>
 
