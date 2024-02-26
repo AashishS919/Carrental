@@ -20,7 +20,10 @@ include "./header.php"
         <button id="sign-up">Sign Up</button>
         <button id="sign-in">Sign In</button>
     </div>
-    <div class="popup1">
+   
+</nav>
+<div>
+<div class="popup1">
         <div class="close-btn">&times;</div>
         <form action="" method="post">
             <h2><span>RENTNOW</span><br />CARRENTAL</h2>
@@ -61,7 +64,7 @@ include "./header.php"
             <button>Sign Up</button>
         </form>
     </div>
-</nav>
+</div>
 
 <?php
 include "./footer.php"

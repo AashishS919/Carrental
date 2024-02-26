@@ -164,7 +164,7 @@ include "./header.php"
             placeholder="Enter Your Phone Number"
             required
           /><br />
-
+        
           <label for="pickup">Pickup Location</label>
           <input
             type="text"
@@ -173,7 +173,8 @@ include "./header.php"
             placeholder="Enter Location to Pick up"
             required
           /><br />
-
+        
+       
           <label for="return">Return Location</label>
           <input
             type="text"
@@ -182,7 +183,8 @@ include "./header.php"
             placeholder="Enter Location to return"
             required
           /><br />
-
+          <div class="pr">
+         <div class="pickup">
           <label for="date1">Pickup Date</label>
           <input
             type="date"
@@ -191,7 +193,8 @@ include "./header.php"
             placeholder="Date Here"
             required
           />
-
+          </div>
+          <div class="return">
           <label for="date2">Return Date</label>
           <input
             type="date"
@@ -200,7 +203,8 @@ include "./header.php"
             placeholder="Date Here"
             required
           /><br />
-
+          </div>
+          </div>
           <button>Rent Now</button>
         </form>
       </section>
