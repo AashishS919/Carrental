@@ -7,7 +7,7 @@
 }
 
 .heading {
-    margin: 50px;
+    margin: 50px 80px;
 }
 
 /* for admin navbar  */
@@ -109,7 +109,8 @@ nav {
 .carform form input[type="text"],
 .carform form input[type="tel"],
 .carform form input[type="email"],
-.carform form input[type="password"] {
+.carform form input[type="password"],
+.carform form input[type="file"] {
     margin-top: 5px;
     display: block;
     width: 100%;
@@ -171,7 +172,7 @@ nav {
 
 /* for users tabe  */
 table {
-    margin: auto;
+    margin: 30px auto;
     width: 90%;
     height: 80%;
     border-collapse: collapse;
