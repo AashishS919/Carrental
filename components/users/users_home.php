@@ -25,26 +25,7 @@ include "./navbar.php";
 </div>
 
 <div class="carDeals">
-    <h2>Most popular car rental deals</h2>
-    <div class="filter">
-        <input type="text" placeholder="Search with keywords">
-        <button>
-            <p>All</p>
-        </button>
-        <button>
-            <p>Hyundai</p>
-        </button>
-        <button>
-            <p>Mahindra</p>
-        </button>
-        <button>
-            <p>Tata</p>
-        </button>
-        <button>
-            <p> Suzuki</p>
-        </button>
 
-    </div>
     <div class="cards" id="Cards">
         <div class="card">
             <h3>Mahindra Scorpio</h3>
@@ -245,7 +226,9 @@ include "./navbar.php";
 
 
     </div>
-
+    <button class="vmr">
+        <a target="_blank" href="./carlisting.php"> View More Car</a>
+    </button>
     <?php
     include "./end.php";
     include "./footer.php"

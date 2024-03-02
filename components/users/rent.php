@@ -18,7 +18,7 @@ if (!empty($_POST)) {
 
     if ($res) {
         echo "Booking successfull";
-        header("location: ./users_home.php");
+        header("location: ./carlisting.php");
     } else {
         die("error" . mysqli_error($conn));
     }

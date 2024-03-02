@@ -163,28 +163,21 @@ footer {
 /* for best car rental deals part  */
 
 .carDeals {
-    height: 900px;
-}
-
-/* 
-#Cards {
-    transition: 0.5s ease;
-    scroll-behavior: smooth;
-} */
-
-.carDeals {
-    /* esma padding margin dida footer lai ni affect hunxa so  */
-    /* padding: 30px; */
-    /* margin: 50px 50px; */
+    min-height: 500px;
     align-items: center;
     text-align: center;
 }
+
+
+
 
 .carDeals h2 {
     margin: 38px;
 }
 
-.carDeals .filter {
+.filter {
+    margin-top: 80px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
 }
@@ -202,7 +195,7 @@ footer {
     outline: none;
 }
 
-.carDeals .filter button {
+.filter button {
     background-color: transparent;
     /* border: none; */
     color: black;
@@ -213,23 +206,44 @@ footer {
     cursor: pointer;
 }
 
+.filter button:hover {
+    background-color: orangered;
+    border: none;
+    color: white;
 
-.carDeals button p {
+}
+
+button p {
     font-weight: 500;
+}
+
+.vmr {
+    margin: 30px;
+    width: 300px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.vmr a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 .carDeals button:hover {
     background-color: orangered;
-    border: none;
-    color: white;
+
+    a {
+        color: white;
+    }
 }
 
 /* for cards  */
 .cards {
+    overflow-x: scroll;
     margin-top: 40px;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+
 }
 
 .card {
@@ -240,6 +254,18 @@ footer {
     box-shadow: 5px 9px 12px gray;
     box-sizing: border-box;
     padding: 15px;
+}
+
+.cars {
+    margin-left: 60px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cars img {
+    height: 150px;
+    width: 250px;
 }
 
 .card h3 {

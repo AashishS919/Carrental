@@ -27,6 +27,9 @@ if (!empty($_POST)) {
         die("error" . mysqli_error($conn));
     }
 }
+
+$sql = "SELECT * FROM car";
+$data = mysqli_query($conn, $sql);
 ?>
 <div class="users">
     <section class="carform">
@@ -60,8 +63,8 @@ if (!empty($_POST)) {
     </section>
 
     <!-- <h1>Cars</h1><br> -->
-    <table border="1px solid black">
 
+    <table border="1px solid black">
         <thead>
             <tr>
                 <th>ID</th>
@@ -70,48 +73,34 @@ if (!empty($_POST)) {
                 <th>Transmission Type</th>
                 <th>Seat Capacity</th>
                 <th>Rate</th>
+                <th>Img</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>johndoe@example.com</td>
-                <td>123-456-7890</td>
-                <td>********</td>
-                <td>ABC123456</td>
-                <td>
-                    <button class="Update">Update</button>
-                    <button class="Delete">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>johndoe@example.com</td>
-                <td>123-456-7890</td>
-                <td>********</td>
-                <td>ABC123456</td>
-                <td>
-                    <button class="Update">Update</button>
-                    <button class="Delete">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>johndoe@example.com</td>
-                <td>123-456-7890</td>
-                <td>********</td>
-                <td>ABC123456</td>
-                <td>
-                    <button class="Update">Update</button>
-                    <button class="Delete">Delete</button>
-                </td>
-            </tr>
+            <?php
+            $key = 0;
+            while ($result = mysqli_fetch_assoc($data)) :
+                $key++;
+            ?>
+                <tr>
+                    <td><?= $key; ?></td>
+                    <td><?= $result['car_name']; ?></td>
+                    <td><?= $result['fuel_litre']; ?></td>
+                    <td><?= $result['transmission_type']; ?></td>
+                    <td><?= $result['seat_capacity']; ?></td>
+                    <td><?= $result['rate']; ?></td>
+                    <td><img src="./uploads/<?= $result['image'] ?>" width="50" alt=""></td>
+                    <td>
+                    <button class="Update"><a href="update.php?updateid=<?=$result['id'];?>">Update</a></button> 
+                    <button class="Delete"><a href="delete.php?deleteid=<?= $result['id']; ?>">Delete</a></button>
+                    </td>
+                </tr>
+            <?php endwhile; ?>
 
         </tbody>
     </table>
 
 </div>
+
+

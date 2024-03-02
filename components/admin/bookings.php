@@ -1,12 +1,15 @@
 <?php
 include "./navbar.php";
+include "./connection.php";
+
+$sql = "SELECT * FROM bookings";
+$data = mysqli_query($conn, $sql);
 ?>
 
 <h1 class="heading">Bookings</h1>
 <table border="1px solid black">
     <thead>
         <tr>
-            <th>ID</th>
             <th>Full Name</th>
             <th>Phone No</th>
             <th>Pickup Location</th>
@@ -14,49 +17,27 @@ include "./navbar.php";
             <th>Pickup Date</th>
             <th>Return Date</th>
             <th>Actions</th>
-
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>johndoe@example.com</td>
-            <td>123-456-7890</td>
-            <td>********</td>
-            <td>ABC123456</td>
-            <td>Hello</td>
-            <td>
-                <button class="Update">Update</button>
-                <button class="Delete">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>johndoe@example.com</td>
-            <td>123-456-7890</td>
-            <td>********</td>
-            <td>ABC123456</td>
-            <td>Hello</td>
-            <td>
-                <button class="Update">Update</button>
-                <button class="Delete">Delete</button>
-            </td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>John Doe</td>
-            <td>johndoe@example.com</td>
-            <td>123-456-7890</td>
-            <td>********</td>
-            <td>ABC123456</td>
-            <td>Hello</td>
-            <td>
-                <button class="Update">Update</button>
-                <button class="Delete">Delete</button>
-            </td>
-        </tr>
+        <?php
+        $key = 0;
+        while ($result = mysqli_fetch_assoc($data)) :
+            $key++;
+        ?>
+            <tr>
+                <td><?= $result['full_name']; ?></td>
+                <td><?= $result['phone']; ?></td>
+                <td><?= $result['pickup_location']; ?></td>
+                <td><?= $result['return_location']; ?></td>
+                <td><?= $result['pickup_date']; ?></td>
+                <td><?= $result['return_date'] ?></td>
+                <td>
+                    
+                    <button class="Delete"><a href="bookings_delete.php?deleteid=<?= $result['id']; ?>">Delete</a></button>
+                    </td>
+            </tr>
+        <?php endwhile; ?>
 
     </tbody>
 </table>

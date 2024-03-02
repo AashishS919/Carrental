@@ -198,7 +198,7 @@ tr {
 }
 
 .Update {
-    width: 40%;
+    width: 60px;
     height: 35px;
     border: none;
     border-radius: 7px;
@@ -207,8 +207,18 @@ tr {
     cursor: pointer;
 }
 
+.Update a {
+    text-decoration: none;
+    color: white;
+}
+
+.Delete a {
+    text-decoration: none;
+    color: white;
+}
+
 .Delete {
-    width: 40%;
+    width: 60px;
     height: 35px;
     border: none;
     border-radius: 7px;
