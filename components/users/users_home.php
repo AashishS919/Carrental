@@ -1,6 +1,6 @@
 <?php
 include "./navbar.php";
-
+// include "../connection.php"; 
 
 if (!isset($_SESSION['is_login'])) {
     header('location:./../signin.php');
@@ -69,7 +69,7 @@ if (!isset($_SESSION['is_login'])) {
                     </div>
                     <!-- rent button  -->
                     <div class="rb">
-                        <button class="rent"><a href="./rent.php">RentNow</a></button>
+                        <button class="rent"><a href="./rent.php?carid=<?= $result['car_name'] ?>">RentNow</a></button>
                     </div>
                 </div>
             </div>

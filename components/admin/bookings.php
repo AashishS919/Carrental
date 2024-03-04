@@ -14,10 +14,10 @@ $data = mysqli_query($conn, $sql);
 <table border="1px solid black">
     <thead>
         <tr>
+
+            <th>Car Name</th>
             <th>Full Name</th>
             <th>Phone No</th>
-            <th>Pickup Location</th>
-            <th>Return Location</th>
             <th>Pickup Date</th>
             <th>Return Date</th>
             <th>Actions</th>
@@ -30,15 +30,14 @@ $data = mysqli_query($conn, $sql);
             $key++;
         ?>
             <tr>
+                <td><?= $result['car_name']; ?></td>
                 <td><?= $result['full_name']; ?></td>
                 <td><?= $result['phone']; ?></td>
-                <td><?= $result['pickup_location']; ?></td>
-                <td><?= $result['return_location']; ?></td>
                 <td><?= $result['pickup_date']; ?></td>
                 <td><?= $result['return_date'] ?></td>
                 <td>
 
-                    <button class="Delete"><a href="bookings_delete.php?deleteid=<?= $result['id']; ?>">Delete</a></button>
+                    <button class="Delete"><a href="bookings_delete.php?deleteid=<?= $result['booking_id']; ?>">Delete</a></button>
                 </td>
             </tr>
         <?php endwhile; ?>

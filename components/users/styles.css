@@ -121,3 +121,82 @@ nav {
 }
 
 
+/* for user profile  */
+
+h1 {
+    text-align: left;
+    padding-left: 80px;
+    margin-top: 50px;
+}
+
+.profile {
+    margin: 70px;
+    display: flex;
+    width: 660px;
+}
+
+.profile h2 {
+    padding: 15px;
+}
+
+.info p {
+    padding: 15px;
+    margin: 10px 0px 20px;
+    font-size: 17px;
+
+}
+
+.info {
+    width: 300px;
+    height: 200px;
+    border-radius: 7px;
+    box-shadow: 5px 9px 12px gray;
+    margin-right: 20px;
+}
+
+.document {
+    width: 300px;
+    height: 200px;
+    border-radius: 7px;
+    box-shadow: 5px 9px 12px gray;
+
+}
+
+.document p {
+    padding: 15px;
+    margin: 10px 0px 20px;
+    font-size: 17px;
+}
+
+table {
+    margin: 30px auto;
+    width: 90%;
+    height: 80%;
+    border-collapse: collapse;
+}
+
+.history h2 {
+    margin: 30px auto;
+    width: 90%;
+    height: 80%;
+
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #0D160B;
+}
+
+th {
+    background-color: #091D47;
+
+    color: white;
+}
+
+
+
+tr {
+    background-color: white;
+}

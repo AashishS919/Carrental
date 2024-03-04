@@ -1,19 +1,17 @@
 <?php
 include "../connection.php";
 include "./header.php";
-
+$key = $_GET['carid'];
 
 if (!empty($_POST)) {
     $name = $_POST['name'];
     $contact = $_POST['contact'];
-    $pickup = $_POST['pickup'];
-    $return = $_POST['return'];
     $date1 = $_POST['date1'];
     $date2 = $_POST['date2'];
     $id = $_SESSION['id'];
 
-    $sql = "INSERT INTO bookings(id,full_name,phone,pickup_location,return_location,pickup_date,return_date)
-    VALUES('$id','$name','$contact','$pickup','$return','$date1','$date2')";
+    $sql = "INSERT INTO bookings(id,full_name,phone,car_name,pickup_date,return_date)
+    VALUES('$id','$name','$contact','$key','$date1','$date2')";
 
     $res = mysqli_query($conn, $sql);
 
@@ -37,12 +35,7 @@ if (!empty($_POST)) {
         <label for="contact">Contact Detail</label>
         <input type="tel" id="contact" name="contact" placeholder="Enter Your Phone Number" required /><br />
 
-        <label for="pickup">Pickup Location</label>
-        <input type="text" id="pickup" name="pickup" placeholder="Enter Location to Pick up" required /><br />
 
-
-        <label for="return">Return Location</label>
-        <input type="text" id="return" name="return" placeholder="Enter Location to return" required /><br />
         <div class="pr">
             <div class="pickup">
                 <label for="date1">Pickup Date</label>

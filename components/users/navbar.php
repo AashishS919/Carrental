@@ -26,7 +26,7 @@ include "../connection.php";
             <img src="../../icons/dropdown.png" alt="">
         </button>
         <div class="dropdown-content">
-            <a href="#">Profile</a>
+            <a href="./profile.php">Profile</a>
             <a href="./logout.php">Logout</a>
         </div>
 
