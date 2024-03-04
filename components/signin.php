@@ -10,14 +10,11 @@ if (!empty($_POST)) {
     $num_of_rows = mysqli_num_rows($result);
     if ($num_of_rows > 0) {
         $student = mysqli_fetch_assoc($result);
-        // $_SESSION['name'] = $student['name'];
-        // $_SESSION['name'] = $student['name'];
-        // $_SESSION['is_login'] = true;
-        // if ($row['usertype'] == "admin") {
-        //     header('location:students.php');
-        // } else {
-        //     header('location:admin.php');
-        // }
+        echo $student;
+        $_SESSION['name'] = $row['full_name'];
+        $_SESSION['is_login'] = true;
+        $_SESSION['id']=$row['id'];
+
         echo "successfull";
         header("location:./users/users_home.php");
 

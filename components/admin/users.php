@@ -3,6 +3,10 @@ include "./navbar.php";
 include "./connection.php";
 $sql = "SELECT * FROM user";
 $data = mysqli_query($conn, $sql);
+if (!isset($_SESSION['is_login'])) {
+    header('location:./login.php');
+    exit();
+}
 ?>
 
 <h1 class="heading">Users</h1>

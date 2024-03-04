@@ -2,6 +2,10 @@
 include "./navbar.php";
 include "./connection.php";
 $folder = "/images";
+if (!isset($_SESSION['is_login'])) {
+    header('location:./login.php');
+    exit();
+}
 
 if (!empty($_POST)) {
     $car_name = $_POST['name'];
@@ -90,10 +94,10 @@ $data = mysqli_query($conn, $sql);
                     <td><?= $result['transmission_type']; ?></td>
                     <td><?= $result['seat_capacity']; ?></td>
                     <td><?= $result['rate']; ?></td>
-                    <td><img src="./uploads/<?= $result['image'] ?>" width="50" alt=""></td>
+                    <td><img src="./uploads/<?= $result['image'] ?>" height="50" width="80" alt=""></td>
                     <td>
-                    <button class="Update"><a href="update.php?updateid=<?=$result['id'];?>">Update</a></button> 
-                    <button class="Delete"><a href="delete.php?deleteid=<?= $result['id']; ?>">Delete</a></button>
+                        <button class="Update"><a href="update.php?updateid=<?= $result['id']; ?>">Update</a></button>
+                        <button class="Delete"><a href="delete.php?deleteid=<?= $result['id']; ?>">Delete</a></button>
                     </td>
                 </tr>
             <?php endwhile; ?>
@@ -102,5 +106,3 @@ $data = mysqli_query($conn, $sql);
     </table>
 
 </div>
-
-

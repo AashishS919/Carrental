@@ -28,201 +28,49 @@ include "./header.php";
     <h2>Most popular car rental deals</h2>
 
     <div class="cards" id="Cards">
-        <div class="card">
-            <h3>Mahindra Scorpio</h3>
-            <img src="../icons/cars/scorpio.png" alt="">
-            <div class="features">
-                <!-- Fuel litre  -->
-                <div class="fl">
-                    <img src="../icons/Features/GasPump.png" alt="">
-                    <p>90L</p>
-                </div>
-                <!-- transmission type  -->
-                <div class="tt">
-                    <img src="../icons/Features/SteeringWheel.png" alt="">
-                    <p>Manual</p>
-                </div>
-                <!-- seat capacity  -->
-                <div class="sc">
-                    <img src="../icons/Features/UsersThree.png" alt="">
-                    <p>8 People</p>
-                </div>
-            </div>
+        <?php
+        $sql = "SELECT * FROM car";
+        $data = mysqli_query($conn, $sql);
+        while ($result = mysqli_fetch_assoc($data)) :
 
-            <div class="details">
-                <div class="rate">
-                    <p>Rs 8000</p>
-                    <p>Rate per day</p>
+        ?>
+            <div class="card">
+                <h3><?= $result['car_name'] ?></h3>
+                <img src="./admin/uploads/<?= $result['image'] ?>" alt="">
+                <div class="features">
+                    <!-- Fuel litre  -->
+                    <div class="fl">
+                        <img src="../icons/Features/GasPump.png" alt="">
+                        <p><?= $result['fuel_litre'] ?></p>
+                    </div>
+                    <!-- transmission type  -->
+                    <div class="tt">
+                        <img src="../icons/Features/SteeringWheel.png" alt="">
+                        <p><?= $result['transmission_type'] ?></p>
+                    </div>
+                    <!-- seat capacity  -->
+                    <div class="sc">
+                        <img src="../icons/Features/UsersThree.png" alt="">
+                        <p><?= $result['seat_capacity'] ?></p>
+                    </div>
                 </div>
-                <!-- rent button  -->
-                <div class="rb">
-                    <button class="rent"><a href="./signin.php">RentNow</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <h3>Mahindra Scorpio</h3>
-            <img src="../icons/cars/scorpio.png" alt="">
-            <div class="features">
-                <!-- Fuel litre  -->
-                <div class="fl">
-                    <img src="../icons/Features/GasPump.png" alt="">
-                    <p>90L</p>
-                </div>
-                <!-- transmission type  -->
-                <div class="tt">
-                    <img src="../icons/Features/SteeringWheel.png" alt="">
-                    <p>Manual</p>
-                </div>
-                <!-- seat capacity  -->
-                <div class="sc">
-                    <img src="../icons/Features/UsersThree.png" alt="">
-                    <p>8 People</p>
-                </div>
-            </div>
 
-            <div class="details">
-                <div class="rate">
-                    <p>Rs 8000</p>
-                    <p>Rate per day</p>
-                </div>
-                <!-- rent button  -->
-                <div class="rb">
-                    <button class="rent"><a href="./signin.php">RentNow</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <h3>Mahindra Scorpio</h3>
-            <img src="../icons/cars/scorpio.png" alt="">
-            <div class="features">
-                <!-- Fuel litre  -->
-                <div class="fl">
-                    <img src="../icons/Features/GasPump.png" alt="">
-                    <p>90L</p>
-                </div>
-                <!-- transmission type  -->
-                <div class="tt">
-                    <img src="../icons/Features/SteeringWheel.png" alt="">
-                    <p>Manual</p>
-                </div>
-                <!-- seat capacity  -->
-                <div class="sc">
-                    <img src="../icons/Features/UsersThree.png" alt="">
-                    <p>8 People</p>
+                <div class="details">
+                    <div class="rate">
+                        <p><?= $result['rate'] ?></p>
+                        <p>Rate per day</p>
+                    </div>
+                    <!-- rent button  -->
+                    <div class="rb">
+                        <button class="rent"><a href="./signin.php">RentNow</a></button>
+                    </div>
                 </div>
             </div>
-
-            <div class="details">
-                <div class="rate">
-                    <p>Rs 8000</p>
-                    <p>Rate per day</p>
-                </div>
-                <!-- rent button  -->
-                <div class="rb">
-                    <button class="rent"><a href="./signin.php">RentNow</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <h3>Mahindra Scorpio</h3>
-            <img src="../icons/cars/scorpio.png" alt="">
-            <div class="features">
-                <!-- Fuel litre  -->
-                <div class="fl">
-                    <img src="../icons/Features/GasPump.png" alt="">
-                    <p>90L</p>
-                </div>
-                <!-- transmission type  -->
-                <div class="tt">
-                    <img src="../icons/Features/SteeringWheel.png" alt="">
-                    <p>Manual</p>
-                </div>
-                <!-- seat capacity  -->
-                <div class="sc">
-                    <img src="../icons/Features/UsersThree.png" alt="">
-                    <p>8 People</p>
-                </div>
-            </div>
-
-            <div class="details">
-                <div class="rate">
-                    <p>Rs 8000</p>
-                    <p>Rate per day</p>
-                </div>
-                <!-- rent button  -->
-                <div class="rb">
-                    <button class="rent"><a href="./signin.php">RentNow</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <h3>Mahindra Scorpio</h3>
-            <img src="../icons/cars/scorpio.png" alt="">
-            <div class="features">
-                <!-- Fuel litre  -->
-                <div class="fl">
-                    <img src="../icons/Features/GasPump.png" alt="">
-                    <p>90L</p>
-                </div>
-                <!-- transmission type  -->
-                <div class="tt">
-                    <img src="../icons/Features/SteeringWheel.png" alt="">
-                    <p>Manual</p>
-                </div>
-                <!-- seat capacity  -->
-                <div class="sc">
-                    <img src="../icons/Features/UsersThree.png" alt="">
-                    <p>8 People</p>
-                </div>
-            </div>
-
-            <div class="details">
-                <div class="rate">
-                    <p>Rs 8000</p>
-                    <p>Rate per day</p>
-                </div>
-                <!-- rent button  -->
-                <div class="rb">
-                    <button class="rent"><a href="./signin.php">RentNow</a></button>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <h3>Mahindra Scorpio</h3>
-            <img src="../icons/cars/scorpio.png" alt="">
-            <div class="features">
-                <!-- Fuel litre  -->
-                <div class="fl">
-                    <img src="../icons/Features/GasPump.png" alt="">
-                    <p>90L</p>
-                </div>
-                <!-- transmission type  -->
-                <div class="tt">
-                    <img src="../icons/Features/SteeringWheel.png" alt="">
-                    <p>Manual</p>
-                </div>
-                <!-- seat capacity  -->
-                <div class="sc">
-                    <img src="../icons/Features/UsersThree.png" alt="">
-                    <p>8 People</p>
-                </div>
-            </div>
-
-            <div class="details">
-                <div class="rate">
-                    <p>Rs 8000</p>
-                    <p>Rate per day</p>
-                </div>
-                <!-- rent button  -->
-                <div class="rb">
-                    <button class="rent"><a href="./signin.php">RentNow</a></button>
-                </div>
-            </div>
-        </div>
+        <?php endwhile; ?>
 
     </div>
+</div>
 
-    <?php
-    include "./footer.php"
-    ?>
+<?php
+include "./footer.php"
+?>

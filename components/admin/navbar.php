@@ -18,7 +18,7 @@ include "./header.php"
     </div>
 
     <div class="option">
-        <button>Logout</button>
+        <button> <a href="./logout.php">Logout</a></button>
     </div>
 
 </nav>

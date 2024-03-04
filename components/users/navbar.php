@@ -1,5 +1,6 @@
 <?php
 include "./header.php";
+include "../connection.php";
 
 ?>
 
@@ -11,7 +12,7 @@ include "./header.php";
 
     <div class="list">
         <ul>
-            <li><a href="./index.php">Home</a></li>
+            <li><a href="./users_home.php">Home</a></li>
             <li><a target="_blank" href="./carlisting.php">Car Listing</a></li>
         </ul>
     </div>
@@ -21,12 +22,12 @@ include "./header.php";
     </div> -->
 
     <div class="dropdown">
-        <button class="dropbtn">Welcome User
+        <button class="dropbtn"><?= $_SESSION['name']; ?>
             <img src="../../icons/dropdown.png" alt="">
         </button>
         <div class="dropdown-content">
             <a href="#">Profile</a>
-            <a href="#">Logout</a>
+            <a href="./logout.php">Logout</a>
         </div>
 
 </nav>

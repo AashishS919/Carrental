@@ -10,9 +10,10 @@ if (!empty($_POST)) {
     $return = $_POST['return'];
     $date1 = $_POST['date1'];
     $date2 = $_POST['date2'];
+    $id = $_SESSION['id'];
 
-    $sql = "INSERT INTO bookings(full_name,phone,pickup_location,return_location,pickup_date,return_date)
-    VALUES('$name','$contact','$pickup','$return','$date1','$date2')";
+    $sql = "INSERT INTO bookings(id,full_name,phone,pickup_location,return_location,pickup_date,return_date)
+    VALUES('$id','$name','$contact','$pickup','$return','$date1','$date2')";
 
     $res = mysqli_query($conn, $sql);
 

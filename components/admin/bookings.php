@@ -1,6 +1,10 @@
 <?php
 include "./navbar.php";
 include "./connection.php";
+if (!isset($_SESSION['is_login'])) {
+    header('location:./login.php');
+    exit();
+}
 
 $sql = "SELECT * FROM bookings";
 $data = mysqli_query($conn, $sql);
@@ -33,9 +37,9 @@ $data = mysqli_query($conn, $sql);
                 <td><?= $result['pickup_date']; ?></td>
                 <td><?= $result['return_date'] ?></td>
                 <td>
-                    
+
                     <button class="Delete"><a href="bookings_delete.php?deleteid=<?= $result['id']; ?>">Delete</a></button>
-                    </td>
+                </td>
             </tr>
         <?php endwhile; ?>
 

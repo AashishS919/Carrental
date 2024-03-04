@@ -1,5 +1,5 @@
 <?php
-include "../connection.php";
+// include "../connection.php";
 include "./navbar.php";
 $sql = "SELECT * FROM car";
 $data = mysqli_query($conn, $sql);
@@ -67,3 +67,7 @@ $data = mysqli_query($conn, $sql);
     <?php endwhile; ?>
 
 </div>
+
+<?php
+include "./end.php";
+?>

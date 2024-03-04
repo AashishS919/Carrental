@@ -45,7 +45,7 @@ $image = $result['image'];
 <div class="users">
     <section class="carform">
         <div class="regcls-btn">&times;</div>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             <h2><span>CARS</span><br />FORM</h2>
 
             <label for="name">Car name</label>
