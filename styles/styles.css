@@ -176,7 +176,9 @@ footer {
 }
 
 .filter {
+    width: 1118px;
     margin-top: 80px;
+    margin-left: 170px;
     margin-bottom: 40px;
     display: flex;
     justify-content: space-around;
@@ -277,7 +279,8 @@ button p {
 }
 
 .cars {
-    margin-left: 60px;
+    width: 1118px;
+    margin-left: 150px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);

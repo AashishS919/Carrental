@@ -6,6 +6,8 @@ if (!isset($_SESSION['is_login'])) {
     exit();
 }
 
+
+
 $sql = "SELECT * FROM bookings";
 $data = mysqli_query($conn, $sql);
 ?>
@@ -37,7 +39,7 @@ $data = mysqli_query($conn, $sql);
                 <td><?= $result['return_date'] ?></td>
                 <td>
 
-                    <button class="Delete"><a href="bookings_delete.php?deleteid=<?= $result['booking_id']; ?>">Delete</a></button>
+                    <button class="Delete"><a href="bookings_delete.php?deleteid=<?= $result['booking_id']; ?>&carid=<?= $result['car_id']; ?>">Delete</a></button>
                 </td>
             </tr>
         <?php endwhile; ?>

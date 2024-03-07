@@ -69,7 +69,20 @@ if (!isset($_SESSION['is_login'])) {
                     </div>
                     <!-- rent button  -->
                     <div class="rb">
-                        <button class="rent"><a href="./rent.php?carid=<?= $result['car_name'] ?>">RentNow</a></button>
+                        <?php
+                        if ($result['is_book']) {
+                        ?>
+                            <!-- <button disabled class="rent"><a href=" ">Not Available</a></button> -->
+                            <a href=""><button disabled>Not Available</button></a>
+                        <?php
+                        }
+                        ?> <?php
+                            if (!$result['is_book']) {
+                            ?>
+                            <button class="rent"><a href="./rent.php?carname=<?= $result['car_name'] ?>&carid=<?= $result['id']; ?>">Rent Now</a></button>
+                        <?php
+                            }
+                        ?>
                     </div>
                 </div>
             </div>

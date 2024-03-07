@@ -35,6 +35,9 @@ $result = mysqli_fetch_assoc($data);
             <p>License No : <?= $result['driving_license_no']; ?></p>
         </div>
     </div>
+    <div class="action">
+        <a href="./profile_update.php?userid=<?= $result['id']; ?>"><button class="Update">Update</button></a>
+    </div>
     <div class="history">
         <table border="1px solid black">
             <h2>Recent Rental Cars</h2>
@@ -43,7 +46,7 @@ $result = mysqli_fetch_assoc($data);
                     <th>Car Name</th>
                     <th>Rent Date</th>
                     <th>Return Date</th>
-
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,6 +60,10 @@ $result = mysqli_fetch_assoc($data);
                         <td><?= $user['car_name'] ?></td>
                         <td><?= $user['pickup_date']; ?></td>
                         <td><?= $user['return_date']; ?></td>
+                        <td>
+                            <a href="./bookings_update.php?updateid=<?= $user['id']; ?>"><button class="Update">Update</button></a>
+                            <a href="./bookings_delete.php?deleteid=<?= $user['booking_id']; ?>&carid=<?= $user['car_id']; ?>""><button class=" Delete">Delete</button></a>
+                        </td>
                     </tr>
                 <?php endwhile; ?>
             </tbody>

@@ -1,7 +1,8 @@
 <?php
 include "../connection.php";
 include "./header.php";
-$key = $_GET['carid'];
+$key = $_GET['carname'];
+$car_id = $_GET['carid'];
 
 if (!empty($_POST)) {
     $name = $_POST['name'];
@@ -9,9 +10,17 @@ if (!empty($_POST)) {
     $date1 = $_POST['date1'];
     $date2 = $_POST['date2'];
     $id = $_SESSION['id'];
+    $is_book = true;
 
-    $sql = "INSERT INTO bookings(id,full_name,phone,car_name,pickup_date,return_date)
-    VALUES('$id','$name','$contact','$key','$date1','$date2')";
+
+
+
+    $sql = "INSERT INTO bookings(id,full_name,phone,car_name,pickup_date,return_date,car_id)
+    VALUES('$id','$name','$contact','$key','$date1','$date2','$car_id')";
+
+    $sql2 = "UPDATE car SET is_book = '$is_book' WHERE id = '$car_id';
+    ";
+    $res2 = mysqli_query($conn, $sql2);
 
     $res = mysqli_query($conn, $sql);
 
