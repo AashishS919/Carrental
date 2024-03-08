@@ -28,7 +28,7 @@ $result = mysqli_fetch_assoc($data);
     <div class="profile">
         <div class="info">
             <h2>Personal Profile</h2>
-            <p>Full Name: <?= $result['full_name']; ?><br>Phone:<?= $result['phone']; ?><br><?= $result['email']; ?></p>
+            <p>Full Name : <?= $result['full_name']; ?><br>Phone : <?= $result['phone']; ?><br>Email : <?= $result['email']; ?></p>
         </div>
         <div class="document">
             <h2>Document</h2>

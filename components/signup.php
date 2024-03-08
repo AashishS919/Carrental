@@ -34,10 +34,11 @@ if (!empty($_POST)) {
         <input type="email" id="email" name="email" placeholder="Enter your Email Address" /><br />
 
         <label for="phone">Phone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" /><br />
+        <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number" maxlength="10" /><br />
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter password" /><br />
+
+        <input type="password" id="password" name="password" placeholder="Enter password" minlength="8" maxlength="16" /><br />
 
 
         <label for="license">Driving license</label>

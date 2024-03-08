@@ -4,37 +4,52 @@ include "./header.php";
 $key = $_GET['carname'];
 $car_id = $_GET['carid'];
 
+$errors = [];
 if (!empty($_POST)) {
     $name = $_POST['name'];
     $contact = $_POST['contact'];
     $date1 = $_POST['date1'];
     $date2 = $_POST['date2'];
-    $id = $_SESSION['id'];
+    $id = isset($_SESSION['id']) ? $_SESSION['id'] : null;
     $is_book = true;
 
+    // Perform date validation
+    if (strtotime($date1) < time() || strtotime($date2) < time()) {
+        $errors[] = "Please select pickup and return dates in the future.";
+    } elseif (strtotime($date2) <= strtotime($date1)) {
+        $errors[] = "Return date must be after pickup date.";
+    }
+
+    if (empty($errors)) {
+        $sql = "INSERT INTO bookings(id,full_name,phone,car_name,pickup_date,return_date,car_id)
+        VALUES('$id','$name','$contact','$key','$date1','$date2','$car_id')";
+
+        $sql2 = "UPDATE car SET is_book = '$is_book' WHERE id = '$car_id';
+        ";
+        $res2 = mysqli_query($conn, $sql2);
+
+        $res = mysqli_query($conn, $sql);
 
 
-
-    $sql = "INSERT INTO bookings(id,full_name,phone,car_name,pickup_date,return_date,car_id)
-    VALUES('$id','$name','$contact','$key','$date1','$date2','$car_id')";
-
-    $sql2 = "UPDATE car SET is_book = '$is_book' WHERE id = '$car_id';
-    ";
-    $res2 = mysqli_query($conn, $sql2);
-
-    $res = mysqli_query($conn, $sql);
-
-    if ($res) {
-        echo "Booking successfull";
-        header("location: ./carlisting.php");
-    } else {
-        die("error" . mysqli_error($conn));
+        if ($res) {
+            // Successful insertion
+            header("location: ./profile.php");
+            exit;
+        } else {
+            // Error in query
+            $errors[] = "Error: " . mysqli_error($conn);
+        }
     }
 }
 
-
-
+// Output errors if any
+if (!empty($errors)) {
+    foreach ($errors as $error) {
+        echo $error . "<br>";
+    }
+}
 ?>
+
 <section class="carform">
     <form action="" method="post">
         <h2><span>RENTNOW</span><br />CARRENTAL</h2>
