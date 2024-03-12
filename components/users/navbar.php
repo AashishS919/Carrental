@@ -6,7 +6,7 @@ include "../connection.php";
 
 <nav>
     <div class="logo">
-        <p>RENTNOW</p>
+        <a href="./users_home.php"><img src="../../icons/logo.svg" height="100px" width="180px" alt=""></a>
         <!-- <h3>CARRENTAL</h3> -->
     </div>
 

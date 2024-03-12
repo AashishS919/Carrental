@@ -29,6 +29,10 @@ nav {
     cursor: pointer;
 }
 
+.logo a img {
+    margin-top: 20px;
+}
+
 .list ul {
     display: flex;
     font-size: 18px;

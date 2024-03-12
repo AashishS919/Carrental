@@ -6,26 +6,6 @@ $data = mysqli_query($conn, $sql);
 ?>
 
 
-<div class="filter">
-    <input type="text" placeholder="Search with keywords">
-    <button>
-        <p>All</p>
-    </button>
-    <button>
-        <p>Hyundai</p>
-    </button>
-    <button>
-        <p>Mahindra</p>
-    </button>
-    <button>
-        <p>Tata</p>
-    </button>
-    <button>
-        <p> Suzuki</p>
-    </button>
-
-</div>
-
 <div class="cars">
     <?php
 
@@ -68,11 +48,11 @@ $data = mysqli_query($conn, $sql);
                     <?php
                     }
                     ?> <?php
-                            if (!$result['is_book']) {
-                            ?>
+                        if (!$result['is_book']) {
+                        ?>
                         <button class="rent"><a href="./rent.php?carname=<?= $result['car_name'] ?>&carid=<?= $result['id']; ?>">Rent Now</a></button>
                     <?php
-                            }
+                        }
                     ?>
                 </div>
             </div>
